@@ -41,12 +41,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChicagoPizzaStore.cs" />
-    <Compile Include="ChicagoStyleCheesePizza.cs" />
-    <Compile Include="NYStyleCheesePizza.cs" />
-    <Compile Include="NYStylePizzaStore.cs" />
+    <Compile Include="Ingridients\Cheese.cs" />
+    <Compile Include="Ingridients\MarinaraSauce.cs" />
+    <Compile Include="Ingridients\MozzarellaCheese.cs" />
+    <Compile Include="Ingridients\Onions.cs" />
+    <Compile Include="Ingridients\PlumTomatoSauce.cs" />
+    <Compile Include="Ingridients\ReggainoCheese.cs" />
+    <Compile Include="Ingridients\Spinach.cs" />
+    <Compile Include="Ingridients\ThickCrustDough.cs" />
+    <Compile Include="Ingridients\ThinCrustDough.cs" />
+    <Compile Include="Ingridients\Veggies.cs" />
+    <Compile Include="PizzaStores\Chicago\ChicagoPizzaIngridientFactory.cs" />
+    <Compile Include="PizzaStores\Chicago\ChicagoPizzaStore.cs" />
+    <Compile Include="PizzaStores\Chicago\ChicagoStyleCheesePizza.cs" />
+    <Compile Include="Ingridients\Dough.cs" />
+    <Compile Include="Ingridients\Sauce.cs" />
+    <Compile Include="PizzaStores\NY\NYPizzaIngridientFactory.cs" />
+    <Compile Include="PizzaStores\NY\NYStyleCheesePizza.cs" />
+    <Compile Include="PizzaStores\NY\NYStylePizzaStore.cs" />
     <Compile Include="Pizza.cs" />
-    <Compile Include="PizzaStore.cs" />
+    <Compile Include="Factories\PizzaIngridientFactory.cs" />
+    <Compile Include="Factories\PizzaStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

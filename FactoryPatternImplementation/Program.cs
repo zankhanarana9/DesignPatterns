@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FactoryPatternClasslibrary;
+using FactoryPatternClasslibrary.PizzaStores;
+using FactoryPatternClasslibrary.Factories;
 
 namespace FactoryPatternImplementation
 {
@@ -11,8 +13,10 @@ namespace FactoryPatternImplementation
     {
         static void Main(string[] args)
         {
-            PizzaStore nyPizzaStore = new NYStylePizzaStore();
-            PizzaStore ChicagoPizzaStore = new ChicagoPizzaStore();
+            PizzaStore nyPizzaStore = 
+                new FactoryPatternClasslibrary.PizzaStores.NY.NYStylePizzaStore();
+            PizzaStore ChicagoPizzaStore = 
+                new FactoryPatternClasslibrary.PizzaStores.Chicago.ChicagoPizzaStore();
 
             Pizza pizza = nyPizzaStore.OrderPizza("Cheese");
             Console.WriteLine($"Ethan orderd {pizza.Name}");
