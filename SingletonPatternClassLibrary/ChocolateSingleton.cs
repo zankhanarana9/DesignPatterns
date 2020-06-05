@@ -10,7 +10,7 @@ namespace SingletonPatternClassLibrary
     {
         private static ChocolateSingleton UniqueInstance;
         // Lock synchronization object
-        private static object syncLock = new object();
+        private static readonly object syncLock = new object();
 
         public bool empty { get; private set; }
         public bool boiled { get; private set; }
