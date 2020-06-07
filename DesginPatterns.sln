@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatePatternClassLibrary
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateDesignPatternImplementation", "TemplateDesignPatternImplementation\TemplateDesignPatternImplementation.csproj", "{F575F88C-B2A9-49A3-98C9-379E765CDFB8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorPatternClassLibrary", "IteratorPatternClassLibrary\IteratorPatternClassLibrary.csproj", "{60E04651-7F2F-4E83-B4FE-FC736AE36B84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorDesignPatternImplementation", "IteratorDesignPatternImplementation\IteratorDesignPatternImplementation.csproj", "{E9DDCE49-2866-49C0-B71B-3C5438F63799}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +115,14 @@ Global
 		{F575F88C-B2A9-49A3-98C9-379E765CDFB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F575F88C-B2A9-49A3-98C9-379E765CDFB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F575F88C-B2A9-49A3-98C9-379E765CDFB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60E04651-7F2F-4E83-B4FE-FC736AE36B84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E04651-7F2F-4E83-B4FE-FC736AE36B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E04651-7F2F-4E83-B4FE-FC736AE36B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E04651-7F2F-4E83-B4FE-FC736AE36B84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9DDCE49-2866-49C0-B71B-3C5438F63799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9DDCE49-2866-49C0-B71B-3C5438F63799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9DDCE49-2866-49C0-B71B-3C5438F63799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9DDCE49-2866-49C0-B71B-3C5438F63799}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
