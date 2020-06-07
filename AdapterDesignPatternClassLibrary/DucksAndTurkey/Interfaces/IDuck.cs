@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StrategyPattern
+namespace AdapterDesignPatternClassLibrary.DucksAndTurkey.Interfaces
 {
-    public interface FlyBehaviour
+    public interface IDuck
     {
         void Fly();
+        void Quack();
     }
 }

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StrategyPattern
+namespace FacadeDesignPatternClassLibrary.Classes
 {
-    public interface FlyBehaviour
+    public class Tuner
     {
-        void Fly();
+
     }
 }
