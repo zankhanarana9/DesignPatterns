@@ -8,24 +8,28 @@ namespace IteratorDesignPatternCSharp
 {
     public class Waitress
     {
-        Menu pancakeHouseMenu = new PancakeHouseMenu();
-        DinerMenu dinerMenu = new DinerMenu();
+        IMenu pancakeHouseMenu = new PancakeHouseMenu();
+        IMenu dinerMenu = new DinerMenu();
+        IMenu cafeMenu = new CafeMenu();
 
-        public Waitress(PancakeHouseMenu pancake, DinerMenu diner)
+        public Waitress(PancakeHouseMenu pancake, DinerMenu diner, CafeMenu cafe)
         {
             pancakeHouseMenu = pancake;
             dinerMenu = diner;
+            cafeMenu = cafe;
         }
 
         public void PrintMenu()
         {
             IEnumerator<MenuItem> pancakeIterator = pancakeHouseMenu.CreateIterator();
             IEnumerator<MenuItem> dinerIterater = dinerMenu.CreateIterator();
-
+            IEnumerator<MenuItem> cafeIterator = cafeMenu.CreateIterator();
             Console.WriteLine("MENU \n-----\nBREAKFAST");
             PrintMenu(pancakeIterator);
             Console.WriteLine("\nLUNCH");
             PrintMenu(dinerIterater);
+            Console.WriteLine("\nDinner");
+            PrintMenu(cafeIterator);
         }
 
         void PrintMenu(IEnumerator<MenuItem> itr)

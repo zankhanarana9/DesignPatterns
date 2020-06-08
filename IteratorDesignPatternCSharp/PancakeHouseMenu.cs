@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IteratorDesignPatternCSharp
 {
-    public class PancakeHouseMenu : Menu
+    public class PancakeHouseMenu : IMenu
     {
         List<MenuItem> MenuItems;
         public PancakeHouseMenu()
@@ -24,7 +24,7 @@ namespace IteratorDesignPatternCSharp
             MenuItems.Add(item);
         }
 
-        IEnumerator<MenuItem> Menu.CreateIterator()
+        IEnumerator<MenuItem> IMenu.CreateIterator()
         {
             return MenuItems.GetEnumerator();
         }

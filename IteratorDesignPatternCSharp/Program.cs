@@ -12,8 +12,8 @@ namespace IteratorDesignPatternCSharp
         {
             PancakeHouseMenu pancake = new PancakeHouseMenu();
             DinerMenu diner = new DinerMenu();
-
-            Waitress waitress = new Waitress(pancake, diner);
+            CafeMenu cafe = new CafeMenu();
+            Waitress waitress = new Waitress(pancake, diner,cafe);
             waitress.PrintMenu();
         }
     }

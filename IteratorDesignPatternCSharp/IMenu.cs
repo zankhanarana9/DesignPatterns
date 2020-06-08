@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IteratorDesignPatternCSharp
 {
-    public interface Menu
+    public interface IMenu
     {
         IEnumerator<MenuItem> CreateIterator();
     }

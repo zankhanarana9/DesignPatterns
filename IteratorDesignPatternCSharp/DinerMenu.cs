@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IteratorDesignPatternCSharp
 {
-    public class DinerMenu : Menu
+    public class DinerMenu : IMenu
     {
         static readonly int MAX_ITEMS = 6;
         int numberOfItems = 0;
