@@ -11,6 +11,7 @@ namespace CompositePatternClassLibrary
         List<MenuComponent> MenuComponents = new List<MenuComponent>();
         public override string Name { get; }
         public override string Description { get; }
+        IEnumerator<MenuComponent> Enumerator;
 
         public Menu(string name, string description)
         {
@@ -42,7 +43,11 @@ namespace CompositePatternClassLibrary
 
         public override IEnumerator<MenuComponent> CreateIterator()
         {
-            throw new NotImplementedException();
+            if(Enumerator == null)
+            {
+                Enumerator = new CompositeIterator(MenuComponents.GetEnumerator());
+            }
+            return Enumerator;
         }
     }
 }

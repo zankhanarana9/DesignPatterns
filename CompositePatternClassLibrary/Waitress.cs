@@ -17,5 +17,22 @@ namespace CompositePatternClassLibrary
         {
             AllMenus.Print();
         }
+        public void PrintVegetarianMenu()
+        {
+            IEnumerator<MenuComponent> enumerator = AllMenus.CreateIterator();
+            Console.WriteLine("\nVEGETARIAN MENU-----");
+            while(enumerator.MoveNext())
+            {
+                MenuComponent menuComponent = (MenuComponent)enumerator.Current;
+                try
+                {
+                    if (menuComponent.IsVegetarian)
+                    {
+                        menuComponent.Print();
+                    }
+                }
+                catch (InvalidOperationException ex) { }
+            }
+        }
     }
 }

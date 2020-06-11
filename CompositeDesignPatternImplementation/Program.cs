@@ -25,12 +25,13 @@ namespace CompositeDesignPatternImplementation
             DinerMenu.Add(new MenuItem("Pasta", "Sphagetti with Marinara sauce, and a slice of sourdough bread", true, 3.89));
             DessertMenu.Add(new MenuItem("Apple pie", "Apple pie with a flaky crust, topped with vanilla ice cream", true, 1.59));
             PancakeMenu.Add(new MenuItem("Pancake", "Pancake with berries", false, 4.69));
+            PancakeMenu.Add(new MenuItem("Blueberry pancakes(v)", "Pancakes made with fresh blueberries", true, 3.49));
             CafeMenu.Add(new MenuItem("Coffee", "Fresh brewed starbuzz coffee", true, 2.99));
             CafeMenu.Add(new MenuItem("Tea", "Chai Tea with fresh basil leaf", true, 2.99));
             DinerMenu.Add(DessertMenu);
 
             Waitress waitress = new Waitress(AllMeus);
-            waitress.PrintMenu();
+            waitress.PrintVegetarianMenu();
         }
     }
 }

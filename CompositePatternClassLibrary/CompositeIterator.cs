@@ -16,9 +16,23 @@ namespace CompositePatternClassLibrary
             stack.Push(iterator);
         }
 
-        public object Current => Current;
+        public MenuComponent Current
+        {
+            get
+            {
+                IEnumerator<MenuComponent> enumerator = stack.Peek();
+                MenuComponent menuComponent = (MenuComponent)enumerator.Current;
+                if (menuComponent.GetType() == typeof(Menu))
+                {
+                    stack.Push(menuComponent.CreateIterator());
+                }
+                return menuComponent;
+            }
+        }
 
-        MenuComponent IEnumerator<MenuComponent>.Current => current ;
+        object IEnumerator.Current => Current ;
+
+        MenuComponent IEnumerator<MenuComponent>.Current => Current;
 
         public void Dispose()
         {
@@ -27,13 +41,13 @@ namespace CompositePatternClassLibrary
 
         public bool MoveNext()
         {
-            if(stack.Count() < 1)
+            if(stack.Count() == 0)
             {
                 return false;
             } else
             {
-                IEnumerator<MenuComponent> Iterator = stack.Peek();
-                if(!Iterator.MoveNext())
+                IEnumerator<MenuComponent> Enumerator = stack.Peek();
+                if(!Enumerator.MoveNext())
                 {
                     stack.Pop();
                     return MoveNext();

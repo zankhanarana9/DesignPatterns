@@ -12,13 +12,13 @@ namespace CompositePatternClassLibrary
         public override string Description { get; }
         public override bool IsVegetarian { get; }
         public override double Price { get; }
-        IEnumerator<MenuComponent> Iterator;
+        IEnumerator<MenuComponent> Enumerator;
 
         public MenuItem(string name, string description,bool isVegetarian, double price)
         {
             Name = name;
             Description = description;
-            IsVegetarian = IsVegetarian;
+            IsVegetarian = isVegetarian;
             Price = price;
         }
 
@@ -34,10 +34,11 @@ namespace CompositePatternClassLibrary
 
         public override IEnumerator<MenuComponent> CreateIterator()
         {
-            if(Iterator == null)
+            if(Enumerator == null)
             {
-                Iterator = new Composite
+                Enumerator = new NullIterator();
             }
+            return Enumerator;
         }
     }
 }
