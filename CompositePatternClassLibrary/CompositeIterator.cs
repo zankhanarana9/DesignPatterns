@@ -10,7 +10,6 @@ namespace CompositePatternClassLibrary
     public class CompositeIterator : IEnumerator<MenuComponent>
     {
         Stack<IEnumerator<MenuComponent>> stack = new Stack<IEnumerator<MenuComponent>>();
-        MenuComponent current;
         public CompositeIterator(IEnumerator<MenuComponent> iterator)
         {
             stack.Push(iterator);

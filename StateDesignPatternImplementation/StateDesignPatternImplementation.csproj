@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4D0F6DCF-D1CE-4E19-9C4A-F8DD58DF978C}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>TemplatePatternClassLibrary</RootNamespace>
-    <AssemblyName>TemplatePatternClassLibrary</AssemblyName>
+    <ProjectGuid>{0B988CAE-2F53-4ADD-8AE9-0923C91947B6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>StateDesignPatternImplementation</RootNamespace>
+    <AssemblyName>StateDesignPatternImplementation</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,13 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CaffeineBeverage.cs" />
-    <Compile Include="Coffee.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tea.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StateDesignPatternClassLibrary\StateDesignPatternClassLibrary.csproj">
+      <Project>{5914a927-5805-48cf-b8a0-6282af58ac2d}</Project>
+      <Name>StateDesignPatternClassLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
